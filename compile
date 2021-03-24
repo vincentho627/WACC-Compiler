@@ -5,3 +5,4 @@ if [ ! -d "build" ]; then
 else 
 	java -cp build/classes/java/main/:lib/antlr-4.9.1-complete.jar Main $1
 fi
+
