@@ -1,0 +1,142 @@
+# Java Gradle CircleCI 2.0 configuration file
+#
+# Check https://circleci.com/docs/2.0/language-java/ for more details
+#
+version: 2
+jobs:
+  build:
+    docker:
+      # specify the version you desire here
+      - image: circleci/openjdk:latest
+
+      # Specify service dependencies here if necessary
+      # CircleCI maintains a library of pre-built images
+      # documented at https://circleci.com/docs/2.0/circleci-images/
+      # - image: circleci/postgres:9.4
+
+    working_directory: ~/repo
+
+    steps:
+      - checkout
+
+      # Download and cache dependencies
+      - restore_cache:
+          keys:
+            - v1-dependencies-{{ checksum "build.gradle" }}
+            # fallback to using the latest cache if no exact match is found
+            - v1-dependencies-
+
+      - run: gradle dependencies
+
+      - save_cache:
+          paths:
+            - ~/.gradle
+          key: v1-dependencies-{{ checksum "build.gradle" }}
+
+      - run: 
+          name: Update apt-get
+          command: 'sudo rm -rf /var/lib/apt/lists/* && sudo apt update'
+      - run: 
+          name: Install make
+          command: 'sudo apt-get install -y make'
+      - run: 
+          name: Install qemu-user
+          command: 'sudo apt-get install -y qemu-user'
+      - run: 
+          name: Install gcc-arm-linux-gnueabi
+          command: 'sudo apt-get install -y gcc-arm-linux-gnueabi'
+  
+  frontend test:
+    docker:
+      # specify the version you desire here
+      - image: circleci/openjdk:latest
+
+    working_directory: ~/repo
+
+    steps:
+      - checkout
+      - run:
+          name: Frontend Valid Tests
+          command: 'make test TESTCLASS="frontend.ValidTests"'
+      - run: 
+          name: Frontend Invalid Syntax Tests
+          command: 'make test TESTCLASS="frontend.InvalidSyntaxTests"'
+      - run: 
+          name: Frontend Invalid Semantic Tests
+          command: 'make test TESTCLASS="frontend.InvalidSemanticTests"'
+
+  backend test:
+    docker:
+      # specify the version you desire here
+      - image: circleci/openjdk:latest
+
+    working_directory: ~/repo
+
+    steps:
+      - checkout
+      - run: 
+          name: Update apt-get
+          command: 'sudo rm -rf /var/lib/apt/lists/* && sudo apt update'
+      - run: 
+          name: Install qemu-user
+          command: 'sudo apt-get install -y qemu-user'
+      - run: 
+          name: Install gcc-arm-linux-gnueabi
+          command: 'sudo apt-get install -y gcc-arm-linux-gnueabi'
+      - run:
+          name: Backend Valid Tests
+          command: 'make test TESTCLASS="backend.ValidTests"'
+
+  extension test:
+    docker:
+      # specify the version you desire here
+      - image: circleci/openjdk:latest
+
+    working_directory: ~/repo
+
+    steps:
+      - checkout
+      - run: 
+          name: Update apt-get
+          command: 'sudo rm -rf /var/lib/apt/lists/* && sudo apt update'
+      - run: 
+          name: Install qemu-user
+          command: 'sudo apt-get install -y qemu-user'
+      - run: 
+          name: Install gcc-arm-linux-gnueabi
+          command: 'sudo apt-get install -y gcc-arm-linux-gnueabi'
+      - run:
+          name: Full Pair Type Test
+          command: 'make test TESTCLASS="FullPairSemanticTests" && make test TESTCLASS="FullPairTypeTests"'
+      - run:
+          name: Bit Wise Test 
+          command: 'make test TESTCLASS="BitWiseTests"'
+      - run:
+          name: Loop Extension Test
+          command: 'make test TESTCLASS="LoopExtensionTests"'
+      - run:
+          name: Class Test
+          command: 'make test TESTCLASS="ClassTests"'
+      - run:
+          name: Int Literal Extension Test
+          command: 'make test TESTCLASS="IntLiteralExtensionTests"'
+      - run:
+          name: Valid Backend Extension Test
+          command: 'make test TESTCLASS="ValidExtensionTests"'
+
+
+workflows:
+  version: 2
+  build_and_test:
+    jobs:
+      - build
+      - frontend test:
+          requires:
+            - build
+      - backend test:
+          requires:
+            - frontend test
+      - extension test:
+          requires:
+            - backend test
+
