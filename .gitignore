@@ -1,0 +1,27 @@
+#ignore auto-generated ANTLR code
+src/main/antlr
+
+#ignore Java class files
+*.class
+
+#ignore other junk files
+*~
+.project
+.idea
+wacc_18.iml
+gen
+src/project/
+src/target/
+target/
+.DS_Store
+out/
+src/.DS_Store
+src/.bsp/sbt.json
+*.s
+*.exe
+
+# Ignore Gradle project-specific cache directory
+.gradle
+
+# Ignore Gradle build output directory
+build

@@ -1,0 +1,91 @@
+default:
+  image: gradle:6.8.1-jdk11
+  before_script:
+    - apt-get update
+    - apt-get install -y make
+    - apt-get install -y qemu-user
+    - apt-get install -y gcc-arm-linux-gnueabi
+
+stages:
+    - build
+    - frontend-test
+    - backend-test
+    - extension-test
+
+build job:
+    stage: build
+    script:
+        - make
+    only:
+        - master
+
+invalid syntax test job:
+    stage: frontend-test
+    script:
+        - make test TESTCLASS="frontend.InvalidSyntaxTests"
+    only:
+        - master
+
+invalid semantics test job:
+    stage: frontend-test
+    script:
+        - make test TESTCLASS="frontend.InvalidSemanticTests"
+    only:
+        - master
+
+valid frontend test job:
+    stage: frontend-test
+    script:
+        - make test TESTCLASS="frontend.ValidTests"
+    only:
+        - master
+
+valid backend test job:
+    stage: backend-test
+    script:
+        - make test TESTCLASS="backend.ValidTests"
+    only:
+        - master
+
+full pair type test job:
+    stage: extension-test
+    script:
+        - make test TESTCLASS="FullPairSemanticTests"
+        - make test TESTCLASS="FullPairTypeTests"
+    only:
+        - master
+        
+bit wise test job:
+    stage: extension-test
+    script:
+        - make test TESTCLASS="BitWiseTests"
+    only:
+        - master
+
+loop extension test job:
+    stage: extension-test
+    script:
+        - make test TESTCLASS="LoopExtensionTests"
+    only:
+        - master
+
+class extension test job:
+    stage: extension-test
+    script:
+        - make test TESTCLASS="ClassTests"
+    only:
+        - master
+ 
+int literal extension test job:
+    stage: extension-test
+    script:
+        - make test TESTCLASS="IntLiteralExtensionTests"
+    only:
+        - master
+
+valid backend extension test job:
+    stage: extension-test
+    script:
+        - make test TESTCLASS="ValidExtensionTests"
+    only:
+        - master
