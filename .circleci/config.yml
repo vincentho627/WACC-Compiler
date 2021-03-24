@@ -45,8 +45,23 @@ jobs:
       - run: 
           name: Install gcc-arm-linux-gnueabi
           command: 'sudo apt-get install -y gcc-arm-linux-gnueabi'
-      
+  
+  frontend test:
+    docker:
+      # specify the version you desire here
+      - image: circleci/openjdk:latest
+    steps:
+      - run:
+          name: Frontend Valid Tests
+          command: 'make test TESTCLASS="frontend.ValidTests"'
       - run: 
-          name: Invalid Syntax Tests
+          name: Frontend Invalid Syntax Tests
           command: 'make test TESTCLASS="frontend.InvalidSyntaxTests"'
+      - run: 
+          name: Frontend Invalid Semantic Tests
+          command: 'make test TESTCLASS="frontend.InvalidSemanticTests"'
+
+      - run:
+          name: Backend Valid Tests
+          command: 'make test TESTCLASS="backend.ValidTests"'
 
