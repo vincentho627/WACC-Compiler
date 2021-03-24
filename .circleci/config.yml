@@ -61,7 +61,25 @@ jobs:
           name: Frontend Invalid Semantic Tests
           command: 'make test TESTCLASS="frontend.InvalidSemanticTests"'
 
-      - run:
-          name: Backend Valid Tests
-          command: 'make test TESTCLASS="backend.ValidTests"'
+  backend test:
+      docker:
+      # specify the version you desire here
+      - image: circleci/openjdk:latest
+      steps:
+        - run:
+            name: Backend Valid Tests
+            command: 'make test TESTCLASS="backend.ValidTests"'
+
+
+workflows:
+  version: 2
+  build_and_test:
+    jobs:
+      - build
+      - frontend test:
+          requires:
+            - build
+      - backend test:
+          requires:
+            - frontend test
 
