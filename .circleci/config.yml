@@ -50,10 +50,13 @@ jobs:
     docker:
       # specify the version you desire here
       - image: circleci/openjdk:latest
+
+    working_directory: ~/repo
+
     steps:
-      # - run:
-      #     name: Frontend Valid Tests
-      #     command: 'make test TESTCLASS="frontend.ValidTests"'
+      - run:
+          name: Frontend Valid Tests
+          command: 'make test TESTCLASS="frontend.ValidTests"'
       - run: 
           name: Frontend Invalid Syntax Tests
           command: 'make test TESTCLASS="frontend.InvalidSyntaxTests"'
@@ -62,10 +65,13 @@ jobs:
           command: 'make test TESTCLASS="frontend.InvalidSemanticTests"'
 
   backend test:
-      docker:
+    docker:
       # specify the version you desire here
       - image: circleci/openjdk:latest
-      steps:
+
+    working_directory: ~/repo
+
+    steps:
         - run:
             name: Backend Valid Tests
             command: 'make test TESTCLASS="backend.ValidTests"'
