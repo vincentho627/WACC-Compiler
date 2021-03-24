@@ -45,6 +45,8 @@ jobs:
       - run: 
           name: Install gcc-arm-linux-gnueabi
           command: 'sudo apt-get install -y gcc-arm-linux-gnueabi'
+      - run: 
+          command: 'make test TESTCLASS="backend.ValidTests"'
   
   frontend test:
     docker:
@@ -78,6 +80,34 @@ jobs:
           name: Backend Valid Tests
           command: 'make test TESTCLASS="backend.ValidTests"'
 
+  extension test:
+    docker:
+      # specify the version you desire here
+      - image: circleci/openjdk:latest
+
+    working_directory: ~/repo
+
+    steps:
+      - checkout
+      - run:
+          name: Full Pair Type Test
+          command: 'make test TESTCLASS="FullPairSemanticTests" && make test TESTCLASS="FullPairTypeTests"'
+      - run:
+          name: Bit Wise Test 
+          command: 'make test TESTCLASS="BitWiseTests"'
+      - run:
+          name: Loop Extension Test
+          command: 'make test TESTCLASS="LoopExtensionTests"'
+      - run:
+          name: Class Test
+          command: 'make test TESTCLASS="ClassTests"'
+      - run:
+          name: Int Literal Extension Test
+          command: 'make test TESTCLASS="IntLiteralExtensionTests"'
+      - run:
+          name: Valid Backend Extension Test
+          command: 'make test TESTCLASS="ValidExtensionTests"'
+
 
 workflows:
   version: 2
@@ -90,4 +120,7 @@ workflows:
       - backend test:
           requires:
             - frontend test
+      - extension test:
+          requires:
+            - backend test
 
