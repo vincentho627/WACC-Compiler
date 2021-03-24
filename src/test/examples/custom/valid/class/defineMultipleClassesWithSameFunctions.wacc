@@ -1,0 +1,17 @@
+# Multiple classes can be defined
+
+begin
+  class H is 
+    private int v
+    private int J(int z) is 
+      return 0
+    end
+  end
+  class K is 
+    private int k
+    private int J(int z) is 
+      return 0
+    end
+  end
+  int k = 0 
+end

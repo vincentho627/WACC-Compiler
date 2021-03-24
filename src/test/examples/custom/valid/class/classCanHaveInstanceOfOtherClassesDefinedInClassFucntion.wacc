@@ -1,0 +1,38 @@
+# Class can have instances of previous classes defined in class functions
+
+
+begin
+  class H is 
+    private string name 
+    public string getName() is 
+      return name
+    end
+  end
+  class Vehicle is
+    private string name ;
+    public int tyres 
+    public string getName() is 
+      return name
+    end
+    public int getNumber() is
+      return tyres
+    end
+    public string setName() is
+      H p = new H("V") ;
+      string name2 = call p.getName() ;
+      return name2
+    end
+  end
+  Vehicle bus = new Vehicle("Bus", 4) ;
+  Vehicle car = new Vehicle("Car", 4) ;
+  string hello = call bus.setName() ;
+  println hello
+end
+
+
+
+
+
+
+
+

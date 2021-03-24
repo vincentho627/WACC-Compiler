@@ -1,0 +1,10 @@
+# Static pair type references wrong dynamic pair
+
+# Exit 255
+
+begin
+	var i = 1;
+	var j = 2;
+	var x = newpair(i, j);
+	pair(int, bool) p = x
+end

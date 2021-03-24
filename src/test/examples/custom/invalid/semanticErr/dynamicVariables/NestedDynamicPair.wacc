@@ -1,0 +1,10 @@
+# cannot declare nested pairs with dynamic variables
+
+# Exit 200
+
+begin
+	var x = newpair(1, 1);
+	var y = newpair(2, 2);
+	pair(pair,pair) p1 = newpair(x, y);
+	var p2 = newpair(x, y)
+end

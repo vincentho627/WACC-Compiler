@@ -1,0 +1,10 @@
+# Assigns dynamic pair to wrong type
+
+# Exit 255
+
+begin
+	var i = 1;
+	var j = 2;
+	var x = newpair(i, j);
+	bool y = fst x
+end

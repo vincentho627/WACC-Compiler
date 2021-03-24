@@ -1,0 +1,31 @@
+# Can assign instance to another instance if same type
+
+begin
+  class Vehicle is
+    private string name ;
+    public int tyres 
+    public string getName() is 
+      return name
+    end
+    public int getNumber() is
+      return tyres
+    end
+    public int setNumber(int offset) is
+      tyres = tyres + offset ;
+      return tyres
+    end
+  end
+  Vehicle bus = new Vehicle("bus", 6) ;
+  Vehicle car = new Vehicle("car", 4) ;
+  println bus.tyres;
+  bus = car ;
+  println bus.tyres 
+end
+
+
+
+
+
+
+
+

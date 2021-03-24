@@ -1,0 +1,16 @@
+# Type mismatch in end expression in for loop
+
+# Output:
+# #semantic_error#
+
+# Exit:
+# 200
+
+# Program:
+
+begin
+  for i in 1 until 'c'
+    do
+        skip
+    done
+end

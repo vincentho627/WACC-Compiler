@@ -1,0 +1,13 @@
+# Can use dynamic variables with binary operator AND
+
+# Expected output:
+# matcha
+
+begin
+    var c = 10;
+    if c < 15 then
+       println "matcha"
+    else
+    skip
+    fi
+end

@@ -1,0 +1,27 @@
+# Deep nested pairs (test TypeID object reference)
+
+# Exit:
+# 200
+
+# Program:
+
+begin
+
+	pair(pair, pair) a = newpair(null, null);
+	pair(pair, pair) b = newpair(a, null);
+
+	pair(int, bool) a1 = newpair(1, true);
+  pair(char, string) b1 = newpair('a', "Hello");
+
+  # Changing a here to set type for b (If TypeID object referenced correctly)
+	fst a = a1;
+	snd a = b1;
+
+	pair(pair, pair) c = newpair(b1, a1);
+	# This should fail, fst b should have same type as a (i.e opposite of c)
+	fst b = c
+
+end
+
+
+

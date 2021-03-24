@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="backend.ValidExtensionTests" tests="5" skipped="0" failures="0" errors="0" timestamp="2021-03-19T15:28:22" hostname="Hos-MacBook-Pro" time="65.14">
+  <properties/>
+  <testcase name="validExtensionDoWhileTest" classname="backend.ValidExtensionTests" time="6.816"/>
+  <testcase name="validExtensionBitwiseTest" classname="backend.ValidExtensionTests" time="5.1"/>
+  <testcase name="validExtensionForLoopTest" classname="backend.ValidExtensionTests" time="4.972"/>
+  <testcase name="validExtensionForClassesTest" classname="backend.ValidExtensionTests" time="43.223"/>
+  <testcase name="validExtensionIntegerLiteralTest" classname="backend.ValidExtensionTests" time="5.029"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

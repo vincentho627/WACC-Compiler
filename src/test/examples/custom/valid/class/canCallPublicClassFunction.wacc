@@ -1,0 +1,17 @@
+# Public class functions can be called
+
+begin
+  class H is 
+    public int v
+    private int J(int k) is 
+      return 0
+    end
+    public int f() is 
+       v = 3 ;
+       return v
+    end
+  end
+  H v = new H(2) ; 
+  int k = call v.f();
+  println k
+end

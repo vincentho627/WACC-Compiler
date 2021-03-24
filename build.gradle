@@ -1,0 +1,39 @@
+// Gradle build file
+
+plugins {
+    id 'java'
+}
+
+// Overrides conventional directory structure
+sourceSets {
+    main {
+        java {
+            srcDirs = ['src/main']
+        }
+    }
+    test {
+        java {
+            srcDirs = ['src/test']
+        }
+    }
+}
+
+// Central repository to resolve dependencies
+repositories {
+    jcenter()
+}
+
+dependencies {
+    // Include local antlr jar file
+    implementation files('lib/antlr-4.9.1-complete.jar')
+    // Test dependencies
+    testImplementation 'junit:junit:4.13'
+    implementation 'junit:junit:4.13'
+}
+
+// To log results when running make test (copied from SED CW)
+test {
+    testLogging {
+        events "PASSED", "FAILED", "SKIPPED"
+    }
+}

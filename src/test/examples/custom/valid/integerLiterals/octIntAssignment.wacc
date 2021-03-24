@@ -1,0 +1,12 @@
+# octal integer variable declaration and assignment
+
+# Output:
+# 34
+
+# Program:
+
+begin
+  int x = 0o0 ;
+  x = 0o42 ;
+  print x
+end

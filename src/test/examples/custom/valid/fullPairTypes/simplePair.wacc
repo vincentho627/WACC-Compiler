@@ -1,0 +1,10 @@
+# Defines a simple pair
+
+# Exit:
+# 0
+
+# Program:
+
+begin
+  pair(int, bool) a = newpair (1, true)
+end

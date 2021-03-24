@@ -1,0 +1,8 @@
+# OR with non bool
+
+# Exit 255
+
+begin
+	var x = "Hello";
+	bool b = x || true
+end

@@ -1,0 +1,12 @@
+# IF with non bool
+
+# Exit 255
+
+begin
+	var x = 1;
+	if x then
+		println "Hello"
+	else 
+		skip
+	fi
+end

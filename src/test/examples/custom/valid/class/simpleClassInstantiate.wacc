@@ -1,0 +1,11 @@
+# Simple Class instantiation
+
+begin
+  class H is 
+    private int v
+    private int J(int k) is 
+      return 0
+    end
+  end
+  H p = new H(2)
+end

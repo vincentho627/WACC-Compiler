@@ -1,0 +1,35 @@
+# Classes cannot have attributes of type class
+
+begin
+  class Vehicle is
+    private string name ;
+    public int tyres 
+    public string getName() is 
+      H p = new H("V") ;
+      return p.name
+    end
+    public int getNumber() is
+      return tyres
+    end
+  end
+  class H is 
+    private Vehicle vehicle 
+    public string getName() is 
+      return name
+    end
+  end
+  Vehicle bus = new Vehicle("Bus", 4) ;
+  Vehicle car = new Vehicle("Car", 4) ;
+  string name1 = call bus.getName() ;
+  H p = new H("V") ;
+  string name2 = call p.getName() ;
+  println hello
+end
+
+
+
+
+
+
+
+

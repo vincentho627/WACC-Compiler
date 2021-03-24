@@ -1,0 +1,9 @@
+# Exit with var that is not an int
+
+# Exit 255
+
+begin
+	var x = 1;
+	x = "Hello";
+	exit x
+end

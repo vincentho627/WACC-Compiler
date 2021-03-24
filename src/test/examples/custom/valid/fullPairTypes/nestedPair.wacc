@@ -1,0 +1,12 @@
+# Defines a nested pair
+
+# Exit:
+# 0
+
+# Program:
+
+begin
+  pair(int, bool) a = newpair (1, true);
+  pair(char, string) b = newpair ('a', "Hello");
+  pair(pair, pair) c = newpair (a, b)
+end

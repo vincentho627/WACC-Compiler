@@ -1,0 +1,8 @@
+# arithmetic with non int
+
+# Exit 255
+
+begin
+	var x = "Hello";
+	int i = x + 1
+end

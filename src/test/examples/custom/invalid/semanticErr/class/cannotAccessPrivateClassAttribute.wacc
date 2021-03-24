@@ -1,0 +1,12 @@
+# Private class attributes cannot be accessed
+
+begin
+  class H is 
+    private int v
+    private int J(int v) is 
+      return 0
+    end
+  end
+  H p = new H(2);
+  p.v = 3
+end

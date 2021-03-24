@@ -1,0 +1,8 @@
+# EQUALITY with different types
+
+# Exit 255
+
+begin
+	var x = "Hello";
+	bool b = x == 1
+end

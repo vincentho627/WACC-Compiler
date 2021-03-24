@@ -1,0 +1,34 @@
+# Can assign instance attribute to return value of a function call
+
+begin
+  class Vehicle is
+    private int name ;
+    public int tyres 
+    public int getName() is 
+      return name
+    end
+    public int getNumber() is
+      return tyres
+    end
+    public int setNumber(int offset) is
+      tyres = tyres + offset ;
+      return tyres
+    end
+  end
+  Vehicle f() is 
+    Vehicle bus = new Vehicle(7, 6) ;
+    return bus
+  end
+  Vehicle bus = new Vehicle(7, 6) ;
+  Vehicle car = new Vehicle(6, 4) ;
+  bus = call f() ;
+  println bus.tyres 
+end
+
+
+
+
+
+
+
+

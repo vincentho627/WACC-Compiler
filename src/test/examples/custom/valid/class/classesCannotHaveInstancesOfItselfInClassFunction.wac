@@ -1,0 +1,36 @@
+# Class cannot have instance of itself inside its class functions
+
+begin
+  class H is 
+    private string name 
+    public string getName() is 
+      return name
+    end
+  end
+  class Vehicle is
+    private string name ;
+    public int tyres 
+    public string getName() is 
+      return name
+    end
+    public int getNumber() is
+      Vehicle car = new Vehicle("Car", 4) ;
+      return car.tyres
+    end
+  end
+  Vehicle bus = new Vehicle("Bus", 4) ;
+  Vehicle car = new Vehicle("Car", 4) ;
+  string name1 = call bus.getName() ;
+  H p = new H("V") ;
+  string name2 = call p.getName() ;
+  println name1 ;
+  println name2
+end
+
+
+
+
+
+
+
+

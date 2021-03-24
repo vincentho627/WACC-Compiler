@@ -1,0 +1,20 @@
+# evaluating bit-wise not
+
+# Output:
+# -43
+# -85
+# -57
+# -7
+
+# Program:
+
+begin
+  int a = 42 ;
+  int b = 84 ;
+  int c = 56 ;
+  int d = 6 ;
+  println ~a ;
+  println ~b ;
+  println ~c ;
+  println ~d
+end

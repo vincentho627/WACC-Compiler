@@ -1,0 +1,11 @@
+# Class functions and constructor must have different names
+
+begin
+  class H is 
+    private int v
+    private int H() is 
+      return 0
+    end
+  end
+  int u = 0
+end

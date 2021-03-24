@@ -1,0 +1,18 @@
+# evaluating bit-wise and
+
+# Output:
+# 0
+# 40
+# 2
+
+# Program:
+
+begin
+  var a = 42 ;
+  var b = 84 ;
+  var c = 56 ;
+  var d = 6 ;
+  println a & b ;
+  println a & c ;
+  println a & d
+end

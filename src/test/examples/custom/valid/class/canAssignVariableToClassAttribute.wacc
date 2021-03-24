@@ -1,0 +1,13 @@
+# Public class attributes can be assigned to something
+
+begin
+  class H is 
+    public int v
+    private int J(int k) is 
+      return 0
+    end
+  end
+  H p = new H(2);
+  int x = p.v;
+  println x
+end

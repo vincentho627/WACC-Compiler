@@ -1,0 +1,15 @@
+# for loop that prints the value of i at every iteration
+
+# Output:
+# 0
+# 1
+# 2
+# 3
+
+# Program:
+
+begin
+  for i in 0 until 4 do
+    println i
+  done
+end

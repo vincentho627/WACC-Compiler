@@ -1,0 +1,40 @@
+# Test to check the dynamically typed variables can coerce between all the types
+
+# Expected output:
+# w
+# c
+
+
+begin
+    var x = false ;     # x can be a bool
+    x = 3;              # x is now supposed to be an int
+    int i = x + 10;     # x can be using in '+' operator
+    x = newpair("hello", 'w'); # x can be of type pair
+    char c = snd x;     # snd x works as x is now of type pair
+    println c;
+    int[] a = [0,1,2,3];
+    x = a;               # x can be an array
+    x = 'c'  ;           # x can be a char
+    println x
+end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,15 @@
+# custom test file
+# trying to call len on unknown variable
+# (Used to fix null pointer in IdentExprAST)
+
+# Output:
+# #semantic_error#
+
+# Exit:
+# 200
+
+# Program:
+
+begin
+  int a = len b
+end

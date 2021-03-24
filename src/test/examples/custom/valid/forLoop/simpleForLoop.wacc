@@ -1,0 +1,16 @@
+# For loop which should print "Change n" 5 times.
+
+# Output:
+# Change n
+# Change n
+# Change n
+# Change n
+# Change n
+
+# Program:
+
+begin
+	for i in 0 until 5 do
+		println "Change n"
+	done
+end

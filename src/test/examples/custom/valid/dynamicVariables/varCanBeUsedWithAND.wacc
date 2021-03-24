@@ -1,0 +1,12 @@
+# Can use dynamic variables with binary operator AND
+
+# Expected output:
+# hello
+begin
+    var c = false;
+    if c && true then
+        skip
+    else
+    println "hello"
+    fi
+end

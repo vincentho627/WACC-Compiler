@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="frontend.FullPairSemanticTests" tests="10" skipped="0" failures="0" errors="0" timestamp="2021-03-19T15:28:21" hostname="Hos-MacBook-Pro" time="0.02">
+  <properties/>
+  <testcase name="nullDecAndCorrectReassignTest" classname="frontend.FullPairSemanticTests" time="0.004"/>
+  <testcase name="deepNestedPairsTest" classname="frontend.FullPairSemanticTests" time="0.002"/>
+  <testcase name="assignNullReassignTest" classname="frontend.FullPairSemanticTests" time="0.001"/>
+  <testcase name="nestedNullBadReassignTest" classname="frontend.FullPairSemanticTests" time="0.003"/>
+  <testcase name="repeatNewPairTest" classname="frontend.FullPairSemanticTests" time="0.001"/>
+  <testcase name="nestedNullReassignTest" classname="frontend.FullPairSemanticTests" time="0.002"/>
+  <testcase name="nullDecAndBadReassignTest" classname="frontend.FullPairSemanticTests" time="0.001"/>
+  <testcase name="badRepeatNewPairTest" classname="frontend.FullPairSemanticTests" time="0.002"/>
+  <testcase name="assignNullBadReassignTest" classname="frontend.FullPairSemanticTests" time="0.003"/>
+  <testcase name="invalidAssignmentTest" classname="frontend.FullPairSemanticTests" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

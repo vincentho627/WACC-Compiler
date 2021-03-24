@@ -1,0 +1,21 @@
+# Can use dynamic variables with artihmetic operator '+' and '-'
+
+# Expected output:
+# hojicha
+# latte
+
+begin
+    var c = 10;
+    int i = c + 5;
+    if i < 15 then
+       println "matcha"
+    else
+       println "hojicha"
+    fi ;
+    int j = c - 10;
+    if j == 0 then
+        println "latte"
+    else
+        skip
+    fi
+end

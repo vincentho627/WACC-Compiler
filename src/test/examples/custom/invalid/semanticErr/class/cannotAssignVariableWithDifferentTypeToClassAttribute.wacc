@@ -1,0 +1,12 @@
+# Class attributes can be assigned only if they have the same type
+
+begin
+  class H is 
+    public int v
+    private int J(int z) is 
+      return 0
+    end
+  end
+  H p = new H(2);
+  bool x = p.v
+end

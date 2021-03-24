@@ -1,0 +1,17 @@
+# Different classes can have their attributes be named the same as other classes
+
+begin
+  class H is 
+    private int v
+    private int J(int k) is 
+      return 0
+    end
+  end
+  class K is 
+    private int v
+    private int P(int k) is 
+      return 0
+    end
+  end
+  int k = 0 
+end

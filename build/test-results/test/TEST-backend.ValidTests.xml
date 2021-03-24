@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="backend.ValidTests" tests="15" skipped="1" failures="0" errors="0" timestamp="2021-03-19T15:29:27" hostname="Hos-MacBook-Pro" time="325.893">
+  <properties/>
+  <testcase name="validIOTest" classname="backend.ValidTests" time="33.48"/>
+  <testcase name="validIfTest" classname="backend.ValidTests" time="17.612"/>
+  <testcase name="validSequenceTest" classname="backend.ValidTests" time="13.778"/>
+  <testcase name="validAdvancedTests" classname="backend.ValidTests" time="0.0">
+    <skipped/>
+  </testcase>
+  <testcase name="validBasicExitTests" classname="backend.ValidTests" time="6.789"/>
+  <testcase name="validExprTests" classname="backend.ValidTests" time="72.27"/>
+  <testcase name="validVariablesTest" classname="backend.ValidTests" time="24.134"/>
+  <testcase name="validArrayTests" classname="backend.ValidTests" time="17.165"/>
+  <testcase name="validScopeTest" classname="backend.ValidTests" time="17.063"/>
+  <testcase name="validWhileTest" classname="backend.ValidTests" time="20.403"/>
+  <testcase name="validSimpleFuncTest" classname="backend.ValidTests" time="20.318"/>
+  <testcase name="validPairsTest" classname="backend.ValidTests" time="27.967"/>
+  <testcase name="validNestedFuncTest" classname="backend.ValidTests" time="13.788"/>
+  <testcase name="validRuntimeErrTest" classname="backend.ValidTests" time="36.065"/>
+  <testcase name="validBasicSkipTests" classname="backend.ValidTests" time="5.06"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

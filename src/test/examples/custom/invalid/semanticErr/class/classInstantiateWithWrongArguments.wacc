@@ -1,0 +1,11 @@
+# Class instantiate must have correct arguments
+
+begin
+  class H is 
+    private int v
+    private int J(int z) is 
+      return 0
+    end
+  end
+  H p = new H(true)
+end

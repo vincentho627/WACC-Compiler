@@ -1,0 +1,11 @@
+# FOR with non int
+
+# Exit 255
+
+begin
+	var x = 1;
+	var y = "Hello";
+	for i in x until y do 
+		skip
+	done
+end

@@ -1,0 +1,18 @@
+# class function param cannot have the same name as class attribute
+
+begin
+    class Car is
+        public string name ;        # Class attributes
+        private int passengers ;    
+        public bool isDriving
+        public bool drive(bool isDriving) is      # Class methods
+            isDriving = isDriving ;
+            return false
+        end
+    end
+    Car car = new Car("Tesla", 5, false) ;    # Instantiating with implicit constructor
+    bool driving = call car.drive(false) ;         # Accessing class attributes and methods
+    println car.name ;
+    println driving ;
+    println car.isDriving    
+end

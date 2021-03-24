@@ -1,0 +1,12 @@
+# Cannot assign class to variable thats already defined
+
+begin
+  class H is 
+    private int v
+    private int J(int z) is 
+      return 0
+    end
+  end
+  int p = 0 ;
+  H p = new H(2)
+end

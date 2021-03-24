@@ -1,0 +1,37 @@
+# Declare nested nulls, then reassign to set types
+
+# Exit:
+# 0
+
+# Program:
+
+begin
+  pair(int, bool) a1 = newpair (1, true);
+  pair(char, string) b1 = newpair ('a', "Hello");
+
+  pair(int, bool) a2 = newpair (2, false);
+  pair(char, string) b2 = newpair ('b', "World");
+
+  pair(pair, pair) c1 = newpair(null, null);
+
+  fst c1 = a1;
+  snd c1 = b1;
+
+  fst c1 = a2;
+  snd c1 = b2;
+
+  pair(pair, pair) c2 = newpair(a1, null);
+
+  snd c2 = b1;
+
+  fst c2 = a2;
+  snd c2 = b2;
+
+  pair(pair, pair) c3 = newpair(null, b1);
+
+  fst c3 = a1;
+
+  fst c3 = a2;
+  snd c3 = b2
+
+end

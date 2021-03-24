@@ -1,0 +1,21 @@
+# For loop which uses its iterator to index into an array
+
+# Expected output:
+# roses
+# peonies
+# hydrangea
+# chrysanthemum
+# lily
+# sunflower
+# daisy
+# orchid
+# tulip
+# baby breath
+
+begin
+  string[] flowers = ["roses", "peonies", "hydrangea", "chrysanthemum", "lily",
+  "sunflower", "daisy", "orchid", "tulip", "baby breath"];
+   for i in 0 until 10 do
+      println flowers[i]
+    done
+end

@@ -1,0 +1,28 @@
+# Class attributes must be assigned to var with same type
+
+begin
+  class H is
+    public int v
+    private int J(int i, bool x) is
+       if x
+   	then
+         return i
+        else
+         return 0
+       fi
+    end
+    public int g() is
+       int y = 3;
+       int k = call J(5, false) ;
+       v = k+y ;
+       return v
+    end
+  end
+  int f() is
+    return 0
+  end
+  H v = new H(2) ;
+  var k = "hello" ;
+  v.v = k ;
+  println v.v
+end

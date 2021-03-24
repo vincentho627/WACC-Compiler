@@ -1,0 +1,16 @@
+# While condition is always false but doWhile will execute the body once
+# regardless
+
+# Output:
+# looping...
+# end of loop
+
+# Program:
+
+begin
+	do
+		println "looping..."
+	while false
+	done ;
+	println "end of loop"
+end

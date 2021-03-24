@@ -1,0 +1,14 @@
+# Class functions cannot have the same name
+
+begin
+  class H is 
+    private int v
+    private int J() is 
+      return 0
+    end
+    private char J() is 
+      return 'c'
+    end
+  end
+  int u = 0
+end

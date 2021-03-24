@@ -1,0 +1,12 @@
+# Can modify dynamic variables of pair type
+
+# Exit Code: 200
+begin
+    string s = "matcha";
+    var c = newpair("hojicha", 19);
+    string result = fst c;
+    println result;
+    fst c = s;     # Can assign pair elem to static variable
+    string r = fst c;
+    println r
+end

@@ -1,0 +1,19 @@
+# Class function return type must match the variable type
+
+begin
+  class H is 
+    public int v
+    private int J(int z) is 
+      return 0
+    end
+    public int f() is 
+       v = 3 ;
+       return v
+    end
+  end
+  int f() is 
+    return 0
+  end
+  H v = new H(2) ; 
+  bool k = call v.f() 
+end

@@ -1,0 +1,39 @@
+# Class Functions can have variables
+
+
+begin
+  class Vehicle is
+    private string name ;
+    public int tyres 
+    public string getName() is 
+      return name
+    end
+    public int getNumber() is
+      return tyres
+    end
+    public int setNumber() is
+      int offset = 5 ;
+      tyres = tyres * offset ;
+      return tyres
+    end
+  end
+  Vehicle bus = new Vehicle("Bus", 4) ;
+  int number1 = call bus.getNumber() ;
+  println number1 ;
+  int number2 = call bus.setNumber() ;
+  println number2 ;
+  int number3 = call bus.getNumber() ;
+  println number3 ;
+  bus.tyres = 5 ;
+  println bus.tyres ;
+  int number4 = call bus.getNumber() ;
+  println number4 
+end
+
+
+
+
+
+
+
+

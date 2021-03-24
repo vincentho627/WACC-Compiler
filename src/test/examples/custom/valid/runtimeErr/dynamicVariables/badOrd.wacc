@@ -1,0 +1,8 @@
+# ORD with non char
+
+# Exit 255
+
+begin
+	var x = 123456;
+	int i = ord x
+end

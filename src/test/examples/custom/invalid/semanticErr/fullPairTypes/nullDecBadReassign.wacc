@@ -1,0 +1,23 @@
+# Same as nullDec, but added bad reassign, hence should fail
+
+# Exit:
+# 200
+
+# Program:
+
+begin
+  pair(pair, pair) c = null;
+
+  pair(int, bool) a1 = newpair (1, true);
+  pair(char, string) b1 = newpair ('a', "Hello");
+  pair(bool, int) a2 = newpair (true, 1);
+  pair(string, char) b2 = newpair ("Hello", 'a');
+
+  # Fixes inner types of c
+  c = newpair(a1, b1);
+
+  # Try to reassign fst c with different types (Semantic error)
+  fst c = a2;
+  # Try to reassign snd c with different types (Semantic error)
+  snd c = b2
+end

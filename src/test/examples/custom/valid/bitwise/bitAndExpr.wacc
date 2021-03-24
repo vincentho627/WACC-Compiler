@@ -1,0 +1,18 @@
+# evaluating bit-wise and
+
+# Output:
+# 0
+# 40
+# 2
+
+# Program:
+
+begin
+  int a = 42 ;
+  int b = 84 ;
+  int c = 56 ;
+  int d = 6 ;
+  println a & b ;
+  println a & c ;
+  println a & d
+end

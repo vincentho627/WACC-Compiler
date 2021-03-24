@@ -1,0 +1,32 @@
+# Simple Class instantiation
+
+begin
+  class Vehicle is
+    public string name ;
+    public int tyres 
+    public string getName() is 
+      return name
+    end
+    public int getNumber() is
+      return tyres
+    end
+    public int setNumber() is
+      tyres = tyres * 5 ;
+      return tyres
+    end
+  end
+  Vehicle bus = new Vehicle("Bus", 6) ;
+  Vehicle car = new Vehicle("Car", 4) ;
+  println bus.tyres ;
+  println car.tyres ;
+  string v = bus.name ;
+  println v 
+end
+
+
+
+
+
+
+
+

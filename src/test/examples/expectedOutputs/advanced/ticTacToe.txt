@@ -1,0 +1,11 @@
+========= Tic Tac Toe ================
+=  Because we know you want to win   =
+======================================
+=                                    =
+= Who would you like to be?          =
+=   x  (play first)                  =
+=   o  (play second)                 =
+=   q  (quit)                        =
+=                                    =
+======================================
+Which symbol you would like to choose: Invalid symbol: 

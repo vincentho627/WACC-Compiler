@@ -1,0 +1,21 @@
+# Class functions can be called inside other class functions
+# Expected output:
+# 8
+
+begin
+  class H is 
+    public int v
+    private int J(int i) is 
+      return i
+    end
+    public int f() is 
+       int y = 3;
+       int k = call J(5) ;
+       v = k+y ;
+       return v
+    end
+  end
+  H v = new H(2) ; 
+  int k = call v.f() ; 
+  println k
+end

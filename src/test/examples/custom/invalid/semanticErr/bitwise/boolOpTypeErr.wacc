@@ -1,0 +1,13 @@
+# expression type mismatch int->bool
+
+# Output:
+# #semantic_error#
+
+# Exit:
+# 200
+
+# Program:
+
+begin
+  bool b = 42 & 56
+end

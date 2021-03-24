@@ -1,0 +1,15 @@
+# Can use dynamic variables with len operator
+
+# Expected output:
+# matcha
+
+begin
+    int[] a = [1,2,3,4,5];
+    var c = a;
+    int i = len a;
+    if i == 5 then
+       println "matcha"
+    else
+       println "hojicha"
+    fi
+end

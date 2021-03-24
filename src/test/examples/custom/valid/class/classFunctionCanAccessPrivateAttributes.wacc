@@ -1,0 +1,15 @@
+# Class functions can access private class attributes
+
+begin
+  class H is 
+    private int v
+    private int J(int k) is 
+      return 0
+    end
+    private int f() is 
+       v = 3 ;
+       return v
+    end
+  end
+  int v = 0 
+end

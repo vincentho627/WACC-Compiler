@@ -1,0 +1,59 @@
+begin
+    class Driver is
+        private string name
+        public string getName() is 
+             return name
+        end
+    end
+    class Car is
+        private int passengers ;    # Class attributes 
+        public string driversName;
+        public bool isDriving 
+        public bool drive() is      # Class methods
+            isDriving = true ; # Class methods can call normal functions
+            return isDriving
+        end
+        public string assignDriver() is
+            Driver d = new Driver("Ren");    # Class methods make instance of classes defined before it
+            string dName = call d.getName(); # and use their methods
+            driversName = dName;
+            return dName
+        end
+    end
+    string getNewDriverName() is
+         Driver d = new Driver("Sofia");
+         string name = call d.getName();
+         return name
+    end
+    Car car = new Car(5,"Tim",false);         # Instantiating with implicit constructor
+    println car.driversName;
+    string s = call car.assignDriver();
+    println s;
+    println car.driversName;
+    bool driving = call car.drive() ;    # Accessing class attributes and methods
+    println driving;
+    string driverName = call getNewDriverName();
+    println driverName        
+end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

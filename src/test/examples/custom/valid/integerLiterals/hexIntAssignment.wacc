@@ -1,0 +1,12 @@
+# hexadecimal integer variable declaration and assignment
+
+# Output:
+# 132
+
+# Program:
+
+begin
+  int x = 0x0 ;
+  x = 0x84 ;
+  print x
+end

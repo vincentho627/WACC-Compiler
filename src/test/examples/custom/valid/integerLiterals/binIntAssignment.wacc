@@ -1,0 +1,12 @@
+# binary integer variable declaration and assignment
+
+# Output:
+# 10
+
+# Program:
+
+begin
+  int x = 0b0 ;
+  x = 0b1010 ;
+  print x
+end

@@ -1,0 +1,36 @@
+# Declare proper nested pair, then assign to null, then reassign to different type (should fail)
+
+# Exit:
+# 200
+
+# Program:
+
+begin
+  pair(int, bool) a1 = newpair (1, true);
+  pair(char, string) b1 = newpair ('a', "Hello");
+
+  pair(pair, pair) c = newpair(a1, b1);
+
+  pair(int, bool) a2 = newpair (2, false);
+  pair(char, string) b2 = newpair ('b', "world");
+
+  c = null;
+
+  fst c = b2;
+  snd c = a2;
+
+  c = newpair(null, null);
+
+  fst c = b2;
+  snd c = a2;
+
+  c = newpair(a1, null);
+
+  fst c = b2;
+  snd c = a2;
+
+  c = newpair(null, b1);
+
+  fst c = b2;
+  snd c = a2
+end

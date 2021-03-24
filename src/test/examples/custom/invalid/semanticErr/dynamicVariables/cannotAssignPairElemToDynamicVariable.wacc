@@ -1,0 +1,11 @@
+# Cannot declare/assign nested pairs or array elements with dynamic variables
+
+# Exit Code: 200
+begin
+    var s = "matcha";
+    var c = newpair("hojicha", 19);
+    string result = fst c;
+    println result;
+    fst c = s;     # Cannot assign pair elem to dynamic variable
+    println result
+end

@@ -1,0 +1,8 @@
+# GT comparison with non int
+
+# Exit 255
+
+begin
+	var x = "Hello";
+	bool b = x > 1
+end

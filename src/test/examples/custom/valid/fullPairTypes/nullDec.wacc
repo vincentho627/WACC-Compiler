@@ -1,0 +1,32 @@
+# Declare as null, can reassign to anything which then fix inner types
+
+# Exit:
+# 0
+
+# Program:
+
+begin
+  pair(pair, pair) c = null;
+
+  pair(int, bool) a1 = newpair (1, true);
+  pair(int, bool) a2 = newpair (2, false);
+  pair(char, string) b1 = newpair ('a', "Hello");
+  pair(char, string) b2 = newpair ('b', "world");
+
+  c = newpair(a1, b1);
+
+  # For debugging
+  pair(int, bool) a3 = fst c;
+  pair(char, string) b3 = snd c;
+  println (a3 == a1);
+  println (b3 == b1);
+
+  fst c = a2;
+  snd c = b2;
+
+  # For debugging
+  pair(int, bool) a4 = fst c;
+  pair(char, string) b4 = snd c;
+  println (a4 == a2);
+  println (b4 == b2)
+end

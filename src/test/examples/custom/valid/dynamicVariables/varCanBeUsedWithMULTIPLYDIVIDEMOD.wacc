@@ -1,0 +1,17 @@
+# Can use dynamic variables with artihmetic operator '*' and '/' and '%'
+
+# Expected output:
+# matcha
+
+begin
+    var c = 10;
+    c = c * 5;
+    c = c / 10;
+    c = c % 2;
+
+    if c == 1 then
+       println "matcha"
+    else
+       println "hojicha"
+    fi
+end

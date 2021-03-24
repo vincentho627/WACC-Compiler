@@ -1,0 +1,17 @@
+# class functions variables cannot have same name as attributes
+
+begin
+    class Car is
+        public string name ;        # Class attributes
+        private int passengers ;    
+        public bool isDriving
+        public bool drive() is      # Class methods
+            bool isDriving = true ;
+            return isDriving
+        end
+    end
+    Car car = new Car("Tesla", 5, false) ;    # Instantiating with implicit constructor
+    bool driving = call car.drive() ;         # Accessing class attributes and methods
+    println car.name ;
+    println driving        
+end

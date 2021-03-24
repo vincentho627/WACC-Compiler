@@ -1,0 +1,23 @@
+# Repeated calls to newpair with different types (should fail)
+
+# Exit:
+# 200
+
+# Program:
+
+begin
+
+  pair(int, bool) a1 = newpair (1, true);
+  pair(char, string) b1 = newpair ('a', "Hello");
+
+  pair(int, bool) a2 = newpair (2, false);
+  pair(char, string) b2 = newpair ('b', "World");
+
+  pair(pair, pair) c = null;
+
+  c = newpair(a1, b1);
+  c = newpair(b2, a2)
+
+end
+
+
