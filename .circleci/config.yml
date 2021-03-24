@@ -76,6 +76,12 @@ jobs:
 
     steps:
       - checkout
+      - run: 
+          name: Install qemu-user
+          command: 'sudo apt-get install -y qemu-user'
+      - run: 
+          name: Install gcc-arm-linux-gnueabi
+          command: 'sudo apt-get install -y gcc-arm-linux-gnueabi'
       - run:
           name: Backend Valid Tests
           command: 'make test TESTCLASS="backend.ValidTests"'
@@ -89,6 +95,12 @@ jobs:
 
     steps:
       - checkout
+      - run: 
+          name: Install qemu-user
+          command: 'sudo apt-get install -y qemu-user'
+      - run: 
+          name: Install gcc-arm-linux-gnueabi
+          command: 'sudo apt-get install -y gcc-arm-linux-gnueabi'
       - run:
           name: Full Pair Type Test
           command: 'make test TESTCLASS="FullPairSemanticTests" && make test TESTCLASS="FullPairTypeTests"'
