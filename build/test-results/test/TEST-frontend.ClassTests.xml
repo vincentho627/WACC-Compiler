@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="frontend.ClassTests" tests="3" skipped="0" failures="0" errors="0" timestamp="2021-03-19T15:28:21" hostname="Hos-MacBook-Pro" time="0.08">
-  <properties/>
-  <testcase name="invalidSyntaxClassTest" classname="frontend.ClassTests" time="0.002"/>
-  <testcase name="invalidSemanticClassTests" classname="frontend.ClassTests" time="0.051"/>
-  <testcase name="validClassTests" classname="frontend.ClassTests" time="0.027"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>
