@@ -51,9 +51,9 @@ jobs:
       # specify the version you desire here
       - image: circleci/openjdk:latest
     steps:
-      - run:
-          name: Frontend Valid Tests
-          command: 'make test TESTCLASS="frontend.ValidTests"'
+      # - run:
+      #     name: Frontend Valid Tests
+      #     command: 'make test TESTCLASS="frontend.ValidTests"'
       - run: 
           name: Frontend Invalid Syntax Tests
           command: 'make test TESTCLASS="frontend.InvalidSyntaxTests"'
